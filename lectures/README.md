@@ -1,7 +1,17 @@
+---
+layout: default
+title: Lectures
+nav_order: 1
+has_children: true
+has_toc: true
+permalink: /lectures
+---
+
 # Lectures
 
 The lectures are organized into units and modules. There are four units:
-- 0x000 - Introduction
-- 0x100 - Software Security
-- 0x200 - Cryptography
-- 0x300 - Hardware Security
+- Introduction
+- Software Security
+- Cryptography
+- Hardware Security
+
