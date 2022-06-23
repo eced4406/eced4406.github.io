@@ -1,3 +1,11 @@
+---
+layout: default
+title: Home
+nav_order: 0
+description: "Course notes for ECED 4406 - Computer Security"
+permalink: /
+---
+
 # ECED 4406 - Computer Security
 
 This repository contains the course material notes. It's primary purpose is to support instructors, but it may be useful for students as well.
