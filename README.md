@@ -8,11 +8,15 @@ permalink: /
 
 # ECED 4406 - Computer Security
 
-This repository contains the course material notes. It's primary purpose is to support instructors, but it may be useful for students as well.
+This repository contains the course material notes.
+Its primary purpose is to support instructors, but it may be useful for students as well.
 
 ## Course Description
 
-Design of secure embedded systems is critical for deploying and connected technology today. This class covers methods used to secure computer systems in general, and then applies them to embedded systems. Many attacks specific to embedded systems are covered, and students will be performing their own tests and development of attacks. Attacks specific to embedded systems including invasive and non-invasive attacks will be covered in detail, both theoretically and in labs.
+Design of secure embedded systems is critical for deploying and connected technology today.
+This class covers methods used to secure computer systems in general, and then applies them to embedded systems.
+Many attacks specific to embedded systems are covered, and students will be performing their own tests and development of attacks.
+Attacks specific to embedded systems including invasive and non-invasive attacks will be covered in detail, both theoretically and in labs.
 
 ## Learning Outcomes
 
