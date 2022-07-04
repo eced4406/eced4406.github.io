@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 0x300 Hardware Security
+title: 0x300 - Hardware Security
 parent: Lectures
 nav_order: 3
 has_children: true

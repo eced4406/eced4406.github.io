@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 0x200 Cryptography
+title: 0x200 - Cryptography
 parent: Lectures
 nav_order: 2
 has_children: true

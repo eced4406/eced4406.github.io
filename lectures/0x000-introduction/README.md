@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 0x000 Introduction
+title: 0x000 - Introduction
 parent: Lectures
 nav_order: 0
 has_children: true
