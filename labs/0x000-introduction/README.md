@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 0x000 Introduction
+title: 0x000 - Introduction
 parent: Labs
 nav_order: 0
 has_children: true
@@ -11,7 +11,7 @@ permalink: /labs/0x000-introduction
 
 ## Set up Raspberry Pi Pico
 These instructions have been adapted from the Digikey instructions.[^1]
-These instructions are also availble in video form.[^2]
+These instructions are also available in video form.[^2]
 
 ### Install Visual Studio Code (vscode)
 The installer for vscode can be download from the visual studio website.[^3]
@@ -66,13 +66,13 @@ C:\VSARM\sdk
 ```
 2. Install GNU Arm Embedded Toolchain. 
 Download the latest windows installer.[^5]
-Run the installer and change the install destination folder to `C:\VSARM\armcc`.
-At the end of the installation, ensure that `Add path to environment variable` is selected.
+Run the installer and change the install destination folder to `C:\VSARM\armcc\<version>`. 
+Note, the version will be automatically entered when using the `Browse...` function and selecting `C:\VSARM\armcc\`.
 
 3. Install MinGW-w64 GCC Tools.
 Download the latest `i686-posix-sjlj` file.[^6]
 Decompress the file and move the contents to `C:\VSARM\mingw`.
-In the end, the file `C:\VSARM\mingw\mingw32` should exist.
+In the end, the folder `C:\VSARM\mingw\mingw32` should exist.
 Open `Command Prompt` and run the following command to create a useful alias:
 ```bash
 echo mingw32-make %* > C:\VSARM\mingw\mingw32\bin\make.bat
@@ -90,10 +90,37 @@ At the end of the installation, select the option to disable the `MAX_PATH` leng
 5. Install git.
 Download the latest windows installer.[^9]
 
-6. Download Pico SDK and Examples.
+6. Update Environment Variables.
+Using windows search, search for `env` and click on `Edit the system environment variables`.
+Click on `Environment Variables...`
+Under the first section (User variables for \<username\>) click `New...` and create the following entry:  
+Variable name: `PICO_SDK_PATH`  
+Variable value: `C:\VSARM\sdk\pico\pico-sdk`  
+Click OK to add the entry.
+
+Under the first section (User variables for \<username\>) click `New...` and create the following entry:  
+Variable name: `PICO_TOOLCHAIN_PATH`  
+Variable value: `C:\VSARM\armcc\<version>\bin\arm-none-eabi-gcc.exe`  
+Click OK to add the entry.
+
+
+Under the second section (System variables) select `Path` and then `Edit...`
+Add/ensure the following entries are listed:
+```
+C:\Program Files\CMake\bin
+C:\Program Files\Git\cmd
+C:\VSARM\armcc\<version>\bin
+C:\VSARM\mingw\mingw32\bin
+```
+Click OK on the 3 open windows: Edit environment variable, Environment Variables, and System Properties to save your changes and close the windows.
+
+1. Download Pico SDK and Examples.
 Create the following folder: `C:\VSARM\sdk\pico`.
 Open Git Bash and run the following commands:
 ```bash
+# add make alias
+echo "alias make=mingw32-make.exe" >> ~/.bashrc
+source ~/.bashrc
 # change directory to the pico folder
 cd /c/VSARM/sdk/pico 
 # obtain the pico sdk using git
@@ -108,36 +135,11 @@ cd ..
 git clone -b master https://github.com/raspberrypi/pico-examples.git
 ```
 
-7. Update Environment Variables.
-Using windows search, search for `env` and click on `Edit the system environment variables`.
-Click on `Environment Variables...`
-Under the first section (User variables for \<username\>) select `Path` and then `Edit`.
-Add/ensure the following entries are listed:
-```
-C:\VSARM\mingw\mingw32\bin
-C:\VSARM\armcc\<release version>\bin
-C:\VSARM\mingw\mingw32\bin
-```
-Click OK to exit the Path window. In the first section (User variables for \<username\>) click `New...` and create the following entry:  
-Variable name: `PICO_SDK_PATH`  
-Variable value: `C:\VSARM\sdk\pico\pico-sdk`  
-Click OK to add the entry.
-
-Under the second section (System variables) select `Path` and then `Edit...`
-Add/ensure the following entries are listed:
-```
-C:\Program Files\CMake\bin
-C:\Program Files\Git\cmd
-```
-Click OK on the 3 open windows: Edit environment variable, Environment Variables, and System Properties to save your changes and close the windows.
-
-8. Test Environement.
+1. Test Environment.
 Open Command Prompt and run the following commands to ensure your environment is set up correctly:
 ```bash
 # try running gcc, should output: "gcc: fatal error: no input files"
 gcc
-# try running make, should output: nothing
-make
 # try running mingw32-make, should output: "mingw32-make: *** No targets specified and no makefile found.  Stop."
 mingw32-make
 # should output: C:\VSARM\sdk\pico\pico-sdk
@@ -145,11 +147,20 @@ echo %PICO_SDK_PATH%
 ```
 
 ### Configure Visual Studio Code (vscode)
-Open Visual Studio Code and open the `Extensions` menu (four square icon) on the left. Search and install for `CMake Tools`. In the extensions list, click the gear at the bottom right of `CMake Tools` to configure it. Scroll down to the `Cmake: Generator` setting and entre the following value depending on your operating system:
+Open Visual Studio Code and open the `Extensions` menu (four square icon) on the left. Search for and install `C/C++ Extension Pack`. Also search for and install `CMake Tools`. In the extensions list, click the gear at the bottom right of `CMake Tools` and click `Extension Settings` to configure it. Scroll down to the `Cmake: Generator` setting and enter the following value depending on your operating system:
 
 Linux: `Unix Makefiles`  
 macOS: `Unix Makefiles`  
 Windows (MinGW): `MinGW Makefiles`
+
+On the bottom bar, click `No active kit` to set the kit, select `GCC <version> arm-none-eabi`. Note, if this kit does not show up, you may need to specify it in the extension settings. If this is the case, click the gear at the bottom left of vscode, click settings and search for kits. Under `Cmake: Additional Kits` enter the following:
+
+```
+C:\VSARM\armcc\<version>\bin\arm-none-eabi-gcc\arm-none-eabi-gcc.exe
+C:\VSARM\armcc\<version>\bin\arm-none-eabi-gcc\arm-none-eabi-g++.exe
+```
+
+Then, click `No active kit` and select `[Scan for kits]`. Select the `GCC <version> arm-none-eabi` kit.
 
 
 [^1]: [https://www.digikey.ca/en/maker/projects/raspberry-pi-pico-and-rp2040-cc-part-1-blink-and-vs-code/7102fb8bca95452e9df6150f39ae8422](https://www.digikey.ca/en/maker/projects/raspberry-pi-pico-and-rp2040-cc-part-1-blink-and-vs-code/7102fb8bca95452e9df6150f39ae8422)
