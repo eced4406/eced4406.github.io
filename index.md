@@ -8,7 +8,7 @@ permalink: /
 
 # ECED 4406 - Computer Security
 
-This site contains the course notes for Dalhousie University's ECED 4406 - Computer Security course.
+This is the course website for Dalhousie's ECED 4406 - Computer Security (Fall 2022).
 
 ## Course Description
 
