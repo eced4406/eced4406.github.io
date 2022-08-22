@@ -22,7 +22,7 @@ title: ECED 4406 - Computer Security
 email: thomas.gt@dal.ca
 description: >- # this means to ignore newlines until "baseurl:"
   Course notes for Dalhousie University's ECED 4406 Computer Security
-baseurl: "/handbook" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://eced4406.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  thomasgt

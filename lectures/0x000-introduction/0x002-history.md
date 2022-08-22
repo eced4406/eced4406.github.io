@@ -3,7 +3,7 @@ layout: default
 title: 0x002 - History
 parent: 0x000 - Introduction
 grand_parent: Lectures
-nav_order: 0
+nav_order: 1
 has_children: true
 has_toc: true
 permalink: /lectures/0x000-introduction/0x002-history

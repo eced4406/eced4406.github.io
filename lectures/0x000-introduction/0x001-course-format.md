@@ -17,21 +17,15 @@ We'll have two lectures a week:
 * Tuesday \| 1:05pm - 2:25pm \| B227
 * Thursday \| 1:05pm - 2:25pm \| B227
 
-## Labs
+## Assessments
 
-We'll have 5 lab sessions during the semester.
-More info can be found [here]({% link index.md %}). // TODO!
+The course assessments have been outlined [here](/#assessments).
 
-## Assignments
+## Office Hours
 
-We'll have 5 assignments.
-More info can be found [here]({% link index.md %}). // TODO!
+Office hours will be provided virtually via Microsoft Teams.
+I'll generally try to be available on Thursday afternoons after our lecture.
 
-## Quizzes
+## Absences
 
-We'll have a quiz during the last 20 minutes of our Thursday lectures.
-Each quiz will cover the content of the last two lectures.
-
-## Project
-
-We'll start a course project during the second half of the semester. More info to come!
+Please let me know via [email](mailto:thomas.gt@dal.ca) if you are going to miss an in-person evaluation.

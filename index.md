@@ -41,6 +41,7 @@ The table below shows the weights for each evaluation type.
 
 Bi-weekly quizzes (closed-book) will be completed during the last ~20 minutes of lecture on the day they are scheduled.
 Your worst quiz mark will be dropped.
+More information can be found [here]({% link quizzes/README.md %}).
 
 ### Assignments
 
