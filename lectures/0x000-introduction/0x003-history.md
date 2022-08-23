@@ -1,12 +1,12 @@
 ---
 layout: default
-title: 0x002 - History
+title: 0x003 - History
 parent: 0x000 - Introduction
 grand_parent: Lectures
-nav_order: 1
+nav_order: 2
 has_children: true
 has_toc: true
-permalink: /lectures/0x000-introduction/0x002-history
+permalink: /lectures/0x000-introduction/0x003-history
 ---
 
 # History
