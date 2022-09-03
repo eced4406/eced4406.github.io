@@ -8,8 +8,9 @@ has_toc: true
 permalink: /assignments/0x000-binary-decoder
 ---
 
-**Due at 11:59pm on September 27, 2022**
 # 0x000 - Binary Decoder
+
+**Due at 11:59pm on September 27, 2022**
 
 Binary file decoders are historically a great source of computer security vulnerabilities.
 Decoders fall into a perfect storm as they:
