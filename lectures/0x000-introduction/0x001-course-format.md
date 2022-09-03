@@ -13,9 +13,12 @@ permalink: /lectures/0x000-introduction/0x001-course-format
 
 ## Lectures
 
-We'll have two lectures a week:
-* Tuesday \| 1:05pm - 2:25pm \| B227
-* Thursday \| 1:05pm - 2:25pm \| B227
+We'll have two lectures a week: Tuesday and Thursday from 1:05pm - 2:25pm in B227
+
+## Labs
+
+Our lab slot is on Wednesdays from 2:35pm - 5:25pm in C248.
+More information can be found here [here](/#labs)
 
 ## Assessments
 
@@ -23,9 +26,7 @@ The course assessments have been outlined [here](/#assessments).
 
 ## Office Hours
 
-Office hours will be provided virtually via Microsoft Teams.
-I'll generally try to be available on Thursday afternoons after our lecture.
-
+Office hours will be provided virtually. Schedule TBD.
 ## Absences
 
 Please let me know via [email](mailto:thomas.gt@dal.ca) if you are going to miss an in-person evaluation.
