@@ -9,7 +9,7 @@ has_toc: true
 permalink: /lectures/0x000-introduction/0x002-sources
 ---
 
-# Sources
+# 0x001 - Sources
 
 All of the information you need for this course will be published to this site.
 That being said, you may want to go beyond the core course material, either to satisfy your own curiosity or when doing research for your project.

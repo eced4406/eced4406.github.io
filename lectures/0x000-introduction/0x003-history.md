@@ -9,7 +9,7 @@ has_toc: true
 permalink: /lectures/0x000-introduction/0x003-history
 ---
 
-# History
+# 0x003 - History
 
 Cryptography, and security more generally, has historically been tied to conflict and war.
 Militaries have developed techniques for communicating securely on the battlefield.

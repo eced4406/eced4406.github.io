@@ -9,7 +9,7 @@ has_toc: true
 permalink: /lectures/0x000-introduction/0x001-course-format
 ---
 
-# Course Format
+# 0x001 - Course Format
 
 ## Lectures
 
