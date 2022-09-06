@@ -51,7 +51,7 @@ Assignments must be completed individually and submitted via Brightspace.
 
 ### Labs
 
-Labs will be completed in pairs.
+Labs will be completed in groups of three.
 One grade will be assigned per-submission (i.e. partners get the same mark).
 Lab reports must be submitted via Brightspace.
 
@@ -67,8 +67,8 @@ These aren't meant to be long; two or three paragraphs is fine.
 ### Project
 
 There will be a group project due at the end of the term.
-You will work in pairs of two to analyze and demonstrate a real-world computer security attack.
-You will primarily be evaluated on a presentation that you will deliver to the rest of the class.
+You will work in groups to analyze and demonstrate a real-world computer security attack.
+You will primarily be evaluated on a presentation that you will deliver to the rest of the class and a report that you will submit.
 
 ### Final Exam
 
