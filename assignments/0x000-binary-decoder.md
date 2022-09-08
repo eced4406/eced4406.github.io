@@ -39,6 +39,11 @@ You won't get much out of this assignment if you just copy one.
 If you're stuck, lean on your classmates for ideas, or post a message in our discussion board.
 Please submit your own work.
 
+## Helpful Links
+
+* [git - the simple guide](https://rogerdudler.github.io/git-guide/)
+* [qoi - lossless image compression in O(n) time](https://phoboslab.org/log/2021/11/qoi-fast-lossless-image-compression)
+
 ## Frequently Asked Questions
 
 *I'm on Windows and I'm having trouble getting a Linux environment up and running. What should I do?*
