@@ -38,3 +38,48 @@ You'll of course be able to find implementations of the QOI decoder online.
 You won't get much out of this assignment if you just copy one.
 If you're stuck, lean on your classmates for ideas, or post a message in our discussion board.
 Please submit your own work.
+
+## Frequently Asked Questions
+
+*I'm on Windows and I'm having trouble getting a Linux environment up and running. What should I do?*
+
+I'd recommend just doing this assignment on Windows if you're not able to quickly get into a Linux environment.
+I don't want you wasting too much time on the environment and not having time to finish the assignment.
+
+We can worry about the Linux environment for the labs later.
+Also, you're going to be working in groups for the labs, so really only one person in your group needs the environment set up.
+I'm working with Jordan Wright to get a virtualbox environment working on the lab computers.
+
+*I'm on Mac. I installed all the required tools with Homebrew, but I'm getting an error related to an old CMake version. Help!*
+
+If you install/upgrade CMake with Homebrew as per the instructions, you should have the latest and greatest CMake installed.
+The problem is that there is another one on your system that is taking priority.
+It's likely you have CMake installed via MacPorts from a previous course.
+Depending on which shell you're using, you probably have a line in your `~/.profile` or `~/.zprofile` file adding some MacPort path to the front of your `PATH` environment variable.
+To resolve this, just add the Homebrew install path to the front of the list.
+This will ensure that things installed via Homebrew will have priority (this is fine as long as you aren't using MacPorts for some other course this semester).
+
+Before:
+```
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+```
+
+After (Intel Macs):
+```
+export PATH=/usr/local/bin:/opt/local/bin:/opt/local/sbin:$PATH
+```
+
+After (Apple Silicon Macs - M1/M2):
+```
+export PATH=/opt/homebrew/bin:/opt/local/bin:/opt/local/sbin:$PATH
+```
+
+*I'm on Windows and I'm trying to get WSL2 working. I followed the instructions for Linux. Everything builds, but when I go to run the viewer, nothing shows up (or I get an error re. SDL2 not being able to initialize). What should I do?*
+
+First, see the top question about getting stuck setting up a Linux environment.
+If you still want to continue down this path, check your version of Windows.
+WSL2 has GUI support baked in if you're using a new enough version of Windows.
+See this [blog](https://docs.microsoft.com/en-us/windows/wsl/tutorials/gui-apps) and this [repo](https://github.com/microsoft/wslg#welcome-to-wslg) for more info.
+
+If you can't upgrade to the latest build of Windows/WSL2, you might still be able to get it working by running your own X server.
+See Seamus's comment [here](https://teams.microsoft.com/l/message/19:03a0c5adf1f54a999863929653d403ad@thread.tacv2/1662602214031?tenantId=60b81999-0b7f-412d-92a3-e17d8ae9e3e0&groupId=4e08a2f1-1d09-4402-ba36-20b67bd3bdfb&parentMessageId=1662572367248&teamName=ECED%204406%20-%20Computer%20Security&channelName=Assignment%20Help&createdTime=1662602214031&allowXTenantAccess=false).
