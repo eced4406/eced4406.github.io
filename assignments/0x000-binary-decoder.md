@@ -88,3 +88,7 @@ See this [blog](https://docs.microsoft.com/en-us/windows/wsl/tutorials/gui-apps)
 
 If you can't upgrade to the latest build of Windows/WSL2, you might still be able to get it working by running your own X server.
 See Seamus's comment [here](https://teams.microsoft.com/l/message/19:03a0c5adf1f54a999863929653d403ad@thread.tacv2/1662602214031?tenantId=60b81999-0b7f-412d-92a3-e17d8ae9e3e0&groupId=4e08a2f1-1d09-4402-ba36-20b67bd3bdfb&parentMessageId=1662572367248&teamName=ECED%204406%20-%20Computer%20Security&channelName=Assignment%20Help&createdTime=1662602214031&allowXTenantAccess=false).
+
+I have updated the Linux instructions to install several required X development libraries.
+Please make sure to install them before trying to configure your CMake project.
+See [this thread](https://teams.microsoft.com/l/message/19:03a0c5adf1f54a999863929653d403ad@thread.tacv2/1662741324732?tenantId=60b81999-0b7f-412d-92a3-e17d8ae9e3e0&groupId=4e08a2f1-1d09-4402-ba36-20b67bd3bdfb&parentMessageId=1662741324732&teamName=ECED%204406%20-%20Computer%20Security&channelName=Assignment%20Help&createdTime=1662741324732&allowXTenantAccess=false) in our `#Assignment Help` channel.
