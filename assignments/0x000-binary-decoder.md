@@ -92,3 +92,28 @@ See Seamus's comment [here](https://teams.microsoft.com/l/message/19:03a0c5adf1f
 I have updated the Linux instructions to install several required X development libraries.
 Please make sure to install them before trying to configure your CMake project.
 See [this thread](https://teams.microsoft.com/l/message/19:03a0c5adf1f54a999863929653d403ad@thread.tacv2/1662741324732?tenantId=60b81999-0b7f-412d-92a3-e17d8ae9e3e0&groupId=4e08a2f1-1d09-4402-ba36-20b67bd3bdfb&parentMessageId=1662741324732&teamName=ECED%204406%20-%20Computer%20Security&channelName=Assignment%20Help&createdTime=1662741324732&allowXTenantAccess=false) in our `#Assignment Help` channel.
+
+*I can build the application, but when I go to run it, the window doesn't open.*
+
+The qoi_viewer application takes one command line argument: the path to the .qoi file to open.
+If you just run the application without specifying the path, all you'll see is a help message about how to run the program.
+
+When running from the command line, just add the path (absolute or relative to your current working directory) of a qio file to the end of your command:
+
+```
+$ cd build/out/bin # You might have to add Debug or Release to the end on Windows
+$ ./qoi_viewer /path/to/your/repo/data/dice.qoi # remember to substitute this path with the real one!
+```
+
+This is great for a quick test, but you probably want to set up VS Code to build and run the application without having to go to the command line.
+Open up the "Run and Debug" menu on the left hand sidebar.
+Click "create a launch.json file", and then click "Add Configuration".
+Pick the "C/C++: Launch" option (the exact text may different depending on your platform).
+Update the "program" field to point to `"${command:cmake.launchTargetPath}"`.
+Add the path to the QOI file you want to open to the "arguments" list.
+Save the file.
+Now you can launch the viewer by typing F5, or by hitting the green play button at the top of the "Run and Debug" sidebar tab.
+
+You can read more about debugging C/C++ projects with VS Code here:
+* https://code.visualstudio.com/docs/cpp/cpp-debug
+* https://vector-of-bool.github.io/docs/vscode-cmake-tools/debugging.html
