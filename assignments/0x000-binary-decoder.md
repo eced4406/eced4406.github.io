@@ -23,7 +23,7 @@ In this assignment, you'll use C to implement a decoder for the QOI image format
 The goal here isn't to write an absolutely perfect decoder with no bugs or vulnerabilities.
 In fact, you'll actually have more fun in Lab 0x001 (zero-indexed) if your decoder has some problems (more on that later).
 For this assignment, you'll only be evaluated on:
-* Can you open the provided test images? These will be provided shortly.
+* Can you open the provided benchmark images? Read more [here](https://github.com/eced4406/qoi-starter-project#benchmark).
 * Is your code well organized, documented, and readable?
 
 One important learning outcome for this course is getting exposure to modern tools that will help you be productive while writing secure software or firmware.
@@ -106,14 +106,13 @@ $ ./qoi_viewer /path/to/your/repo/data/dice.qoi # remember to substitute this pa
 ```
 
 This is great for a quick test, but you probably want to set up VS Code to build and run the application without having to go to the command line.
-Open up the "Run and Debug" menu on the left hand sidebar.
-Click "create a launch.json file", and then click "Add Configuration".
-Pick the "C/C++: Launch" option (the exact text may different depending on your platform).
-Update the "program" field to point to `"${command:cmake.launchTargetPath}"`.
-Add the path to the QOI file you want to open to the "arguments" list.
-Save the file.
-From the Command Palette, run "CMake: Set Debug Target" and select "qoi_viewer".
-Now you can launch the viewer by typing F5, by hitting the green play button at the top of the "Run and Debug" sidebar tab, or by hitting the play or debug button in the bottom task bar.
+* Open up the "Run and Debug" menu on the left hand sidebar.
+* Click "create a launch.json file", and then click "Add Configuration".
+* Pick the "C/C++: Launch" option (the exact text may different depending on your platform).
+* Update the "program" field to point to `"${command:cmake.launchTargetPath}"`.
+* Add the path to the QOI file you want to open to the "arguments" list.
+* Save the file.
+* From the Command Palette, run "CMake: Set Debug Target" and select "qoi_viewer". Now you can launch the viewer by typing F5 or by hitting the green play button at the top of the "Run and Debug" sidebar tab.
 
 You can read more about debugging C/C++ projects with VS Code here:
 * https://code.visualstudio.com/docs/cpp/cpp-debug
