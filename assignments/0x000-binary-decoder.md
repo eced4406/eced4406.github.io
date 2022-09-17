@@ -39,6 +39,52 @@ You won't get much out of this assignment if you just copy one.
 If you're stuck, lean on your classmates for ideas, or post a message in our discussion board.
 Please submit your own work.
 
+## Grading
+
+This assignment will be graded out of 10 points.
+* Automated benchmark assessment (6 points)
+  * `0.qoi`: `QOI_OP_RGB` and `QOI_OP_RGBA` (2 points)
+  * `1.qoi`: `QOI_OP_RUN` (2 points)
+  * `2.qoi`: `QOI_OP_INDEX` (1 point)
+  * `3.qoi`: `QOI_OP_DIFF` and `QOI_OP_LUMA` (1 point)
+* Code quality (4 points)
+  * Is your code easy to read?
+  * Is your code well-organized?
+
+Code "quality" is somewhat subjective.
+Here are some common code quality issues for which I might dock you points:
+* Using "magic" constants. Prefer named macros or `const` variables to help readers understand where your constants are coming from. 
+* Using global, mutable state. Global variables can make your program difficult to follow. When a function modifies a global variable, it means there are side-effects that you need to keep track of. Prefer passing any state your function needs into the function directly via an argument. This also makes testing easier!
+* No documentation / bad naming. Make it easy for readers of your code to understand what is going on. Think carefully about how you name your variables and functions such that they convey what your program is doing. If you've given your symbols good names and it still not obvious what is going on, add a comment to explain it.
+
+## Submitting Your Assignment
+
+Submit your assignment electronically through Brightspace.
+Use git to generate a patch file containing all the differences between your completed assignment and the project template.
+
+```
+$ cd path/to/your/project/repo # substitute with your path
+$ git checkout assignment # substitute with whatever you named your branch
+$ git diff main > B00XXXXXX.patch # substitute with your Dal banner number
+```
+
+This will generate a patch file in your current directory.
+This is the file that you'll submit on Brightspace.
+You can open it with a text editor to manually inspect it.
+In the comments section of your Brightspace submission, tell me what environment you used when working on your assignment (e.g. Windows + WSL, Windows, MacOS, Linux, etc.).
+Also, paste the output of the `qoi_benchmark` program when you run it against your decoder.
+
+If you want, you can simulate what I'll do when marking your assignment.
+
+```
+$ cd somewhere/else/on/your/computer
+$ git clone --recurse-submodules https://github.com/eced4406/qoi-starter-project.git submission-test
+$ cd submission-test
+$ git checkout -b B00XXXXXX # substitute with your banner number
+$ git apply path/to/your/B00XXXXXX.patch
+$ code . # open it up in VS Code to check it over
+```
+
 ## Helpful Links
 
 * [git - the simple guide](https://rogerdudler.github.io/git-guide/)
