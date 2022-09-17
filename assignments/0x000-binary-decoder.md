@@ -52,7 +52,7 @@ This assignment will be graded out of 10 points.
   * Is your code well-organized?
 
 Code "quality" is somewhat subjective.
-Here are some common code quality issues for which I might dock you points:
+Here is a non-exhaustive list of some common code quality issues for which I might dock you points:
 * Using "magic" constants. Prefer named macros or `const` variables to help readers understand where your constants are coming from. 
 * Using global, mutable state. Global variables can make your program difficult to follow. When a function modifies a global variable, it means there are side-effects that you need to keep track of. Prefer passing any state your function needs into the function directly via an argument. This also makes testing easier!
 * No documentation / bad naming. Make it easy for readers of your code to understand what is going on. Think carefully about how you name your variables and functions such that they convey what your program is doing. If you've given your symbols good names and it still not obvious what is going on, add a comment to explain it.
