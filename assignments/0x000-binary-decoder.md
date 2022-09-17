@@ -45,7 +45,7 @@ This assignment will be graded out of 10 points.
 * Automated benchmark assessment (7 points)
   * `0.qoi`: `QOI_OP_RGB` and `QOI_OP_RGBA` (2 points)
   * `1.qoi`: `QOI_OP_RUN` (2 points)
-  * `2.qoi`: `QOI_OP_INDEX` (2 point)
+  * `2.qoi`: `QOI_OP_INDEX` (2 points)
   * `3.qoi`: `QOI_OP_DIFF` and `QOI_OP_LUMA` (1 point)
 * Code quality (3 points)
   * Is your code easy to read?
