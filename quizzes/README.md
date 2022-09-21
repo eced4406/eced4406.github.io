@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Quizzes
-nav_order: 3
+nav_order: 4
 has_children: false
 has_toc: false
 permalink: /quizzes
