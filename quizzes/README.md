@@ -11,11 +11,10 @@ permalink: /quizzes
 
 Quizzes take place during the last ~20 minutes of the lecture period during which they are scheduled.
 Quizzes cover topics from lectures, assignments, and labs since the last quiz.
-Your worst quiz will be dropped.
 
 ## Schedule
 
-* September 15, 2022 
+* September 15, 2022
 * September 29, 2022
 * October 13, 2022
 * October 27, 2022
