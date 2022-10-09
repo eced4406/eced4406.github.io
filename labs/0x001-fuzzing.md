@@ -37,7 +37,7 @@ From the virtual machine resource page, click "Create".
 Now, you'll be prompted to configure the virtual machine.
 There are some important properties you'll want to set:
 * **Subscription**: Make sure "Azure for Students" is selected.
-* **Resource group**: You can set this if you want. Resource groups are like folders for cloud resources, making it easier to track them or clean them up when you're done. If you plan on using Azure for other courses, you could make an "ECED 4406" resource group.
+* **Resource group**: You can set this if you want. Resource groups are like folders for cloud resources, making it easier to track them or clean them up when you're done. You could make an "ECED 4406" resource group.
 * **Virtual machine name**: Set this to something memorable (e.g. lab-0x001-vm)
 * **Region**: On a student subscription, you'll have limited choice here. At the time of writing this, "West Europe" or "UK South" seem to have the best selection of VMs. If you pick a region that is geographically distant, you'll experience higher latency when connecting to the VM.
 * **Image**: Choose Debian 11 "Bullseye" - Gen 2
@@ -86,7 +86,7 @@ Before running any script you find on the internet, it is a good idea to manuall
 
 From the SSH shell for your virtual machine, run the following command:
 ```
-$ curl https://gist.githubusercontent.com/thomasgt/5e958016d49085b6532df25fffdb4c4d/raw/f514f760340ef692e6cc4c97192d91854a6fa6b5/install-lab-0x001.sh | bash
+$ curl https://gist.githubusercontent.com/thomasgt/5e958016d49085b6532df25fffdb4c4d/raw/9278f4a2c3af841b3dcae507f73a5f37bbb63c16/install-lab-0x001.sh | bash
 ```
 
 Once you have the necessary tools installed on the VM, you can set up Visual Studio Code on your local machine.
@@ -132,4 +132,16 @@ At this point, you should be ready to start analyzing and improving your code!
 
 ## Procedure
 
+In terms of static analysis, we're going to keep things pretty simple.
+We'll enable a number of compiler warnings and try to resolve them all.
 
+To turn on compiler warnings, you need to set the `ENABLE_WARNINGS` CMake option.
+With the `qoi` project open remotely in VS Code, type `CONTROL/COMMAND` + `,` to open the settings.
+Select the "Workspace" tab and open the JSON settings view from the top right corner.
+
+![Open VS Code settings](images/vs-code-settings.png)
+
+Add the following snippet to turn on `ENABLE_WARNINGS`:
+```
+
+```
