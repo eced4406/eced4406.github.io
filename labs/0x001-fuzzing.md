@@ -132,16 +132,57 @@ At this point, you should be ready to start analyzing and improving your code!
 
 ## Procedure
 
+### Fuzzing
+
+We'll start off with a bang by running the fuzzer against our decoders.
+To enable fuzzing, select the "Linux Debug - Fuzzing" configuration and run "CMake: Delete cache and reconfigure" from the VS Code command palette.
+Once CMake configuration completes, run "CMake: Build".
+
+You should have an executable `qoi_info`.
+This is a simple program that opens a QOI file and prints its metadata.
+Try using this program to open some of the "bad" images in the `data/fuzzing` folder.
+
+```
+$ ./build-linux-debug-fuzzing/out/bin/qoi_info data/fuzzing/bad.0.qoi
+```
+
+Depending on the state of your decoder, you may see some problems.
+The address or undefined behaviour sanitizer may warning you about different problems.
+
+You can take this a step further by running the fuzzer.
+This will generate a variety of random inputs based on the perturbing the sample files in specified folder.
+
+```
+$ ./build-linux-debug-fuzzing/out/bin/qoi_fuzz_test --TODO
+```
+
+At this point, you may have some problems to fix.
+If the fuzzer found any problems, it should write the bad data to a file that you can inspect.
+Take note of any of the problems you find and include them in your report.
+Can you determine why the problem occurred?
+You may want to open problem files with `qoi_info` in the debugger to spot the problem.
+
+You may have to leave the fuzzer running for some time to spot an error.
+Alternatively, you can switch to someone else's assignment to see if you spot any problems.
+You may want to keep each of your group members' assignments on different branches so you can switch between them easily.
+You may want to run the `qoi_info` program in the debugger to
+
+So you have some problems to fix, but how do you know where to get started?
+Turn on the static analyzers to spot possible errors in your code.
+
+### Static Analysis
 In terms of static analysis, we're going to keep things pretty simple.
 We'll enable a number of compiler warnings and try to resolve them all.
+We'll also run two static analysis tools: cppcheck and clang-tidy.
 
-To turn on compiler warnings, you need to set the `ENABLE_WARNINGS` CMake option.
-With the `qoi` project open remotely in VS Code, type `CONTROL/COMMAND` + `,` to open the settings.
-Select the "Workspace" tab and open the JSON settings view from the top right corner.
+To enable these warnings and tools, select the "Linux Debug - Static Analysis".
+Rebuild everything with "CMake: Delete cache and reconfigure" followed by "CMake: Clean rebuild".
+Now you should see some additional warnings in the Output tab.
+You can also see a summary of the issues in the Problems tab.
+You may even see some yellow squiggles in the code itself.
 
-![Open VS Code settings](images/vs-code-settings.png)
+Take note of the recommendations and try to fix them.
+In your report, show how you fixed the different warnings.
+You may find it useful to take screenshots of your code diffs.
 
-Add the following snippet to turn on `ENABLE_WARNINGS`:
-```
-
-```
+Once you clean up all the warnings, re-run your decoder against the bad inputs and see if you fair any better.
