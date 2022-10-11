@@ -151,10 +151,19 @@ The address or undefined behaviour sanitizer may warning you about different pro
 
 You can take this a step further by running the fuzzer.
 This will generate a variety of random inputs based on the perturbing the sample files in specified folder.
+**NOTE: I am running these commands from the root of my qoi project folder.
+You may need to update your paths accordingly.**
 
 ```
-$ ./build-linux-debug-fuzzing/out/bin/qoi_fuzz_test --TODO
+$ ./build-linux-debug-fuzzing/out/bin/qoi_fuzz_test -rss_limit_mb=5000 data/fuzzing
 ```
+
+NOTE: I set the `rss_limit_mb` to 5000MB, which is a bit larger than the maximum size of QOI image my decoder will decode.
+If RSS is set too low, the fuzzer will give you lots of out of memory (OOM) errors, which aren't super interesting.
+For more info on the fuzzing command line arguments, see [here](https://www.llvm.org/docs/LibFuzzer.html#options).
+Feel free to experiment with some different options.
+
+HINT: You probably want to set some kind of maximum output size limit in your decoder too!
 
 At this point, you may have some problems to fix.
 If the fuzzer found any problems, it should write the bad data to a file that you can inspect.
