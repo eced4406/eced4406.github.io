@@ -10,7 +10,7 @@ permalink: /labs/0x001-fuzzing
 
 # 0x001 - Fuzzing
 
-**Due at 11:59pm on TBD**
+**Due at 11:59pm on October 25, 2022**
 
 In this lab, you'll run static and dynamic analysis tools on your decoder from assignment 0x000 to find potential bugs and vulnerabilities.
 
