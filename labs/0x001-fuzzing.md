@@ -89,6 +89,11 @@ From the SSH shell for your virtual machine, run the following command:
 $ curl https://gist.githubusercontent.com/thomasgt/5e958016d49085b6532df25fffdb4c4d/raw/957bef3b77d2d795e3c7b986722f5bcb219473a1/install-lab-0x001.sh | bash
 ```
 
+After you run the script, update your path by running:
+```
+$ source ~/.bashrc
+```
+
 Once you have the necessary tools installed on the VM, you can set up Visual Studio Code on your local machine.
 
 ### Configure Visual Studio Code
