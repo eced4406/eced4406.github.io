@@ -79,14 +79,14 @@ $ ssh -i path/to/your/key.pem YOUR_VM_USERNAME@YOUR_VM_IP
 
 ### Setup development environment
 
-Once your VM is running and accessible over SSH, you can run the setup script (available [here](https://gist.githubusercontent.com/thomasgt/5e958016d49085b6532df25fffdb4c4d/raw/9adc16c9b7dfff54655f5b5e0a3089fc81a351e7/install-lab-0x001.sh)).
+Once your VM is running and accessible over SSH, you can run the setup script (available [here](https://gist.githubusercontent.com/thomasgt/5e958016d49085b6532df25fffdb4c4d/raw/957bef3b77d2d795e3c7b986722f5bcb219473a1/install-lab-0x001.sh)).
 
 Before running any script you find on the internet, it is a good idea to manually inspect it to make sure it isn't doing anything nefarious. Here it is:
 <script src="https://gist.github.com/thomasgt/5e958016d49085b6532df25fffdb4c4d.js"></script>
 
 From the SSH shell for your virtual machine, run the following command:
 ```
-$ curl https://gist.githubusercontent.com/thomasgt/5e958016d49085b6532df25fffdb4c4d/raw/9adc16c9b7dfff54655f5b5e0a3089fc81a351e7/install-lab-0x001.sh | bash
+$ curl https://gist.githubusercontent.com/thomasgt/5e958016d49085b6532df25fffdb4c4d/raw/957bef3b77d2d795e3c7b986722f5bcb219473a1/install-lab-0x001.sh | bash
 ```
 
 Once you have the necessary tools installed on the VM, you can set up Visual Studio Code on your local machine.
