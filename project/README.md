@@ -37,7 +37,7 @@ There are many types of vulnerabilities, but for this project, please focus on t
 ## Dates
 
 * **November 4:** Submit your group members and your topic.
-* **November 30:** Present to the class during your lab period.
+* **November 30:** Present to the class during your lab period. Depending on how many groups we have, we may need to use some lecture time on December 1 as well. The presentation schedule will be released once you submit your groups and topics.
 * **December 7:** Final report due.
 
 ## Grading
