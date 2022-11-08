@@ -14,7 +14,7 @@ For Assignment 0x002, you'll apply power analysis to a program that validates a 
 
 ## Jupyter
 
-You'll complete this assignment in a Jupyter notebook.
+The procedure for this assingment is defined in a Jupyter notebook (available [here](https://github.com/eced4406/power-analysis)).
 Jupyter notebooks are interactive environments where you can mix code (usually Python) and rich text.
 Dr. O'Flynn has a nice introduction to Jupyter notebooks [here](https://www.youtube.com/watch?v=v5W8Uff4x0Q).
 
