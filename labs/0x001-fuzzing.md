@@ -199,4 +199,4 @@ Take note of the recommendations and try to fix them.
 In your report, show how you fixed the different warnings.
 You may find it useful to take screenshots of your code diffs.
 
-Once you clean up all the warnings, re-run your decoder against the bad inputs and see if you fair any better.
+Once you clean up all the warnings, re-run your decoder against the bad inputs and see if you fare any better.
